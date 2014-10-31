@@ -852,6 +852,862 @@
 
 
 
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+@brand-primary:         #428bca;
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+@body-bg:               #fff;
+//** Global text color on `<body>`.
+@text-color:            @gray-dark;
+
+//** Global textual link color.
+@link-color:            @brand-primary;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+//** Link hover decoration.
+@link-hover-decoration: underline;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+@headings-font-family:    inherit;
+@headings-font-weight:    500;
+@headings-line-height:    1.1;
+@headings-color:          inherit;
+
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+//** Load fonts from this directory.
+@icon-font-path:          "../fonts/";
+//** File name for all font files.
+@icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+@icon-font-svg-id:        "glyphicons_halflingsregular";
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+@padding-base-vertical:     6px;
+@padding-base-horizontal:   12px;
+
+@padding-large-vertical:    10px;
+@padding-large-horizontal:  16px;
+
+@padding-small-vertical:    5px;
+@padding-small-horizontal:  10px;
+
+@padding-xs-vertical:       1px;
+@padding-xs-horizontal:     5px;
+
+@line-height-large:         1.33;
+@line-height-small:         1.5;
+
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
+
+//** Global color for active items (e.g., navs or dropdowns).
+@component-active-color:    #fff;
+//** Global background color for active items (e.g., navs or dropdowns).
+@component-active-bg:       @brand-primary;
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+@caret-width-base:          4px;
+//** Carets increase slightly in size for larger components.
+@caret-width-large:         5px;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Padding for `<th>`s and `<td>`s.
+@table-cell-padding:            8px;
+//** Padding for cells in `.table-condensed`.
+@table-condensed-cell-padding:  5px;
+
+//** Default background color used for all tables.
+@table-bg:                      transparent;
+//** Background color used for `.table-striped`.
+@table-bg-accent:               #f9f9f9;
+//** Background color used for `.table-hover`.
+@table-bg-hover:                #f5f5f5;
+@table-bg-active:               @table-bg-hover;
+
+//** Border color for table and cell borders.
+@table-border-color:            #ddd;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+@btn-font-weight:                normal;
+
+@btn-default-color:              #333;
+@btn-default-bg:                 #fff;
+@btn-default-border:             #ccc;
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
+
+@btn-success-color:              #fff;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-info-color:                 #fff;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                darken(@btn-info-bg, 5%);
+
+@btn-warning-color:              #fff;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               #fff;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-link-disabled-color:        @gray-light;
+
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+@input-bg:                       #fff;
+//** `<input disabled>` background color
+@input-bg-disabled:              @gray-lighter;
+
+//** Text color for `<input>`s
+@input-color:                    @gray;
+//** `<input>` border color
+@input-border:                   #ccc;
+
+// TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
+//** Default `.form-control` border radius
+@input-border-radius:            @border-radius-base;
+//** Large `.form-control` border radius
+@input-border-radius-large:      @border-radius-large;
+//** Small `.form-control` border radius
+@input-border-radius-small:      @border-radius-small;
+
+//** Border color for inputs on focus
+@input-border-focus:             #66afe9;
+
+//** Placeholder text color
+@input-color-placeholder:        #999;
+
+//** Default `.form-control` height
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+//** Large `.form-control` height
+@input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+//** Small `.form-control` height
+@input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color:                   @gray-dark;
+@legend-border-color:            #e5e5e5;
+
+//** Background color for textual input addons
+@input-group-addon-bg:           @gray-lighter;
+//** Border color for textual input addons
+@input-group-addon-border-color: @input-border;
+
+//** Disabled cursor for form controls and buttons.
+@cursor-disabled:                not-allowed;
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+@dropdown-bg:                    #fff;
+//** Dropdown menu `border-color`.
+@dropdown-border:                rgba(0,0,0,.15);
+//** Dropdown menu `border-color` **for IE8**.
+@dropdown-fallback-border:       #ccc;
+//** Divider color for between dropdown items.
+@dropdown-divider-bg:            #e5e5e5;
+
+//** Dropdown link text color.
+@dropdown-link-color:            @gray-dark;
+//** Hover color for dropdown links.
+@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+//** Hover background for dropdown links.
+@dropdown-link-hover-bg:         #f5f5f5;
+
+//** Active dropdown menu item text color.
+@dropdown-link-active-color:     @component-active-color;
+//** Active dropdown menu item background color.
+@dropdown-link-active-bg:        @component-active-bg;
+
+//** Disabled dropdown menu item background color.
+@dropdown-link-disabled-color:   @gray-light;
+
+//** Text color for headers within dropdown menus.
+@dropdown-header-color:          @gray-light;
+
+//** Deprecated `@dropdown-caret-color` as of v3.1.0
+@dropdown-caret-color:           #000;
+
+
+//-- Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+//
+// Note: These variables are not generated into the Customizer.
+
+@zindex-navbar:            1000;
+@zindex-dropdown:          1000;
+@zindex-popover:           1060;
+@zindex-tooltip:           1070;
+@zindex-navbar-fixed:      1030;
+@zindex-modal:             1040;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+@grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         30px;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint:     @screen-sm-min;
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+@container-tablet:             (720px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (1140px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+@navbar-height:                    50px;
+@navbar-margin-bottom:             @line-height-computed;
+@navbar-border-radius:             @border-radius-base;
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+@navbar-collapse-max-height:       340px;
+
+@navbar-default-color:             #777;
+@navbar-default-bg:                #f8f8f8;
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-default-link-color:                #777;
+@navbar-default-link-hover-color:          #333;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:       #ccc;
+@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           #ddd;
+@navbar-default-toggle-icon-bar-bg:        #888;
+@navbar-default-toggle-border-color:       #ddd;
+
+
+// Inverted navbar
+// Reset inverted navbar basics
+@navbar-inverse-color:                      lighten(@gray-light, 15%);
+@navbar-inverse-bg:                         #222;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+
+// Inverted navbar links
+@navbar-inverse-link-color:                 lighten(@gray-light, 15%);
+@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-bg:              transparent;
+@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-disabled-bg:           transparent;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-bg:             transparent;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:            #333;
+@navbar-inverse-toggle-icon-bar-bg:         #fff;
+@navbar-inverse-toggle-border-color:        #333;
+
+
+//== Navs
+//
+//##
+
+//=== Shared nav styles
+@nav-link-padding:                          10px 15px;
+@nav-link-hover-bg:                         @gray-lighter;
+
+@nav-disabled-link-color:                   @gray-light;
+@nav-disabled-link-hover-color:             @gray-light;
+
+//== Tabs
+@nav-tabs-border-color:                     #ddd;
+
+@nav-tabs-link-hover-border-color:          @gray-lighter;
+
+@nav-tabs-active-link-hover-bg:             @body-bg;
+@nav-tabs-active-link-hover-color:          @gray;
+@nav-tabs-active-link-hover-border-color:   #ddd;
+
+@nav-tabs-justified-link-border-color:            #ddd;
+@nav-tabs-justified-active-link-border-color:     @body-bg;
+
+//== Pills
+@nav-pills-border-radius:                   @border-radius-base;
+@nav-pills-active-link-hover-bg:            @component-active-bg;
+@nav-pills-active-link-hover-color:         @component-active-color;
+
+
+//== Pagination
+//
+//##
+
+@pagination-color:                     @link-color;
+@pagination-bg:                        #fff;
+@pagination-border:                    #ddd;
+
+@pagination-hover-color:               @link-hover-color;
+@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-border:              #ddd;
+
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             @brand-primary;
+
+@pagination-disabled-color:            @gray-light;
+@pagination-disabled-bg:               #fff;
+@pagination-disabled-border:           #ddd;
+
+
+//== Pager
+//
+//##
+
+@pager-bg:                             @pagination-bg;
+@pager-border:                         @pagination-border;
+@pager-border-radius:                  15px;
+
+@pager-hover-bg:                       @pagination-hover-bg;
+
+@pager-active-bg:                      @pagination-active-bg;
+@pager-active-color:                   @pagination-active-color;
+
+@pager-disabled-color:                 @pagination-disabled-color;
+
+
+//== Jumbotron
+//
+//##
+
+@jumbotron-padding:              30px;
+@jumbotron-color:                inherit;
+@jumbotron-bg:                   @gray-lighter;
+@jumbotron-heading-color:        inherit;
+@jumbotron-font-size:            ceil((@font-size-base * 1.5));
+
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+@state-success-text:             #3c763d;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:                #31708f;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text:             #8a6d3b;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text:              #a94442;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
+
+
+//== Tooltips
+//
+//##
+
+//** Tooltip max width
+@tooltip-max-width:           200px;
+//** Tooltip text color
+@tooltip-color:               #fff;
+//** Tooltip background color
+@tooltip-bg:                  #000;
+@tooltip-opacity:             .9;
+
+//** Tooltip arrow width
+@tooltip-arrow-width:         5px;
+//** Tooltip arrow color
+@tooltip-arrow-color:         @tooltip-bg;
+
+
+//== Popovers
+//
+//##
+
+//** Popover body background color
+@popover-bg:                          #fff;
+//** Popover maximum width
+@popover-max-width:                   276px;
+//** Popover border color
+@popover-border-color:                rgba(0,0,0,.2);
+//** Popover fallback border color
+@popover-fallback-border-color:       #ccc;
+
+//** Popover title background color
+@popover-title-bg:                    darken(@popover-bg, 3%);
+
+//** Popover arrow width
+@popover-arrow-width:                 10px;
+//** Popover arrow color
+@popover-arrow-color:                 @popover-bg;
+
+//** Popover outer arrow width
+@popover-arrow-outer-width:           (@popover-arrow-width + 1);
+//** Popover outer arrow color
+@popover-arrow-outer-color:           fadein(@popover-border-color, 5%);
+//** Popover outer arrow fallback color
+@popover-arrow-outer-fallback-color:  darken(@popover-fallback-border-color, 20%);
+
+
+//== Labels
+//
+//##
+
+//** Default label background color
+@label-default-bg:            @gray-light;
+//** Primary label background color
+@label-primary-bg:            @brand-primary;
+//** Success label background color
+@label-success-bg:            @brand-success;
+//** Info label background color
+@label-info-bg:               @brand-info;
+//** Warning label background color
+@label-warning-bg:            @brand-warning;
+//** Danger label background color
+@label-danger-bg:             @brand-danger;
+
+//** Default label text color
+@label-color:                 #fff;
+//** Default text color of a linked label
+@label-link-hover-color:      #fff;
+
+
+//== Modals
+//
+//##
+
+//** Padding applied to the modal body
+@modal-inner-padding:         15px;
+
+//** Padding applied to the modal title
+@modal-title-padding:         15px;
+//** Modal title line-height
+@modal-title-line-height:     @line-height-base;
+
+//** Background color of modal content area
+@modal-content-bg:                             #fff;
+//** Modal content border color
+@modal-content-border-color:                   rgba(0,0,0,.2);
+//** Modal content border color **for IE8**
+@modal-content-fallback-border-color:          #999;
+
+//** Modal backdrop background color
+@modal-backdrop-bg:           #000;
+//** Modal backdrop opacity
+@modal-backdrop-opacity:      .5;
+//** Modal header border color
+@modal-header-border-color:   #e5e5e5;
+//** Modal footer border color
+@modal-footer-border-color:   @modal-header-border-color;
+
+@modal-lg:                    900px;
+@modal-md:                    600px;
+@modal-sm:                    300px;
+
+
+//== Alerts
+//
+//## Define alert colors, border radius, and padding.
+
+@alert-padding:               15px;
+@alert-border-radius:         @border-radius-base;
+@alert-link-font-weight:      bold;
+
+@alert-success-bg:            @state-success-bg;
+@alert-success-text:          @state-success-text;
+@alert-success-border:        @state-success-border;
+
+@alert-info-bg:               @state-info-bg;
+@alert-info-text:             @state-info-text;
+@alert-info-border:           @state-info-border;
+
+@alert-warning-bg:            @state-warning-bg;
+@alert-warning-text:          @state-warning-text;
+@alert-warning-border:        @state-warning-border;
+
+@alert-danger-bg:             @state-danger-bg;
+@alert-danger-text:           @state-danger-text;
+@alert-danger-border:         @state-danger-border;
+
+
+//== Progress bars
+//
+//##
+
+//** Background color of the whole progress component
+@progress-bg:                 #f5f5f5;
+//** Progress bar text color
+@progress-bar-color:          #fff;
+//** Variable for setting rounded corners on progress bar.
+@progress-border-radius:      @border-radius-base;
+
+//** Default progress bar color
+@progress-bar-bg:             @brand-primary;
+//** Success progress bar color
+@progress-bar-success-bg:     @brand-success;
+//** Warning progress bar color
+@progress-bar-warning-bg:     @brand-warning;
+//** Danger progress bar color
+@progress-bar-danger-bg:      @brand-danger;
+//** Info progress bar color
+@progress-bar-info-bg:        @brand-info;
+
+
+//== List group
+//
+//##
+
+//** Background color on `.list-group-item`
+@list-group-bg:                 #fff;
+//** `.list-group-item` border color
+@list-group-border:             #ddd;
+//** List group border radius
+@list-group-border-radius:      @border-radius-base;
+
+//** Background color of single list items on hover
+@list-group-hover-bg:           #f5f5f5;
+//** Text color of active list items
+@list-group-active-color:       @component-active-color;
+//** Background color of active list items
+@list-group-active-bg:          @component-active-bg;
+//** Border color of active list elements
+@list-group-active-border:      @list-group-active-bg;
+//** Text color for content within active list items
+@list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
+
+//** Text color of disabled list items
+@list-group-disabled-color:      @gray-light;
+//** Background color of disabled list items
+@list-group-disabled-bg:         @gray-lighter;
+//** Text color for content within disabled list items
+@list-group-disabled-text-color: @list-group-disabled-color;
+
+@list-group-link-color:         #555;
+@list-group-link-hover-color:   @list-group-link-color;
+@list-group-link-heading-color: #333;
+
+
+//== Panels
+//
+//##
+
+@panel-bg:                    #fff;
+@panel-body-padding:          15px;
+@panel-heading-padding:       10px 15px;
+@panel-footer-padding:        @panel-heading-padding;
+@panel-border-radius:         @border-radius-base;
+
+//** Border color for elements within panels
+@panel-inner-border:          #ddd;
+@panel-footer-bg:             #f5f5f5;
+
+@panel-default-text:          @gray-dark;
+@panel-default-border:        #ddd;
+@panel-default-heading-bg:    #f5f5f5;
+
+@panel-primary-text:          #fff;
+@panel-primary-border:        @brand-primary;
+@panel-primary-heading-bg:    @brand-primary;
+
+@panel-success-text:          @state-success-text;
+@panel-success-border:        @state-success-border;
+@panel-success-heading-bg:    @state-success-bg;
+
+@panel-info-text:             @state-info-text;
+@panel-info-border:           @state-info-border;
+@panel-info-heading-bg:       @state-info-bg;
+
+@panel-warning-text:          @state-warning-text;
+@panel-warning-border:        @state-warning-border;
+@panel-warning-heading-bg:    @state-warning-bg;
+
+@panel-danger-text:           @state-danger-text;
+@panel-danger-border:         @state-danger-border;
+@panel-danger-heading-bg:     @state-danger-bg;
+
+
+//== Thumbnails
+//
+//##
+
+//** Padding around the thumbnail image
+@thumbnail-padding:           4px;
+//** Thumbnail background color
+@thumbnail-bg:                @body-bg;
+//** Thumbnail border color
+@thumbnail-border:            #ddd;
+//** Thumbnail border radius
+@thumbnail-border-radius:     @border-radius-base;
+
+//** Custom text color for thumbnail captions
+@thumbnail-caption-color:     @text-color;
+//** Padding around the thumbnail caption
+@thumbnail-caption-padding:   9px;
+
+
+//== Wells
+//
+//##
+
+@well-bg:                     #f5f5f5;
+@well-border:                 darken(@well-bg, 7%);
+
+
+//== Badges
+//
+//##
+
+@badge-color:                 #fff;
+//** Linked badge text color on hover
+@badge-link-hover-color:      #fff;
+@badge-bg:                    @gray-light;
+
+//** Badge text color in active nav link
+@badge-active-color:          @link-color;
+//** Badge background color in active nav link
+@badge-active-bg:             #fff;
+
+@badge-font-weight:           bold;
+@badge-line-height:           1;
+@badge-border-radius:         10px;
+
+
+//== Breadcrumbs
+//
+//##
+
+@breadcrumb-padding-vertical:   8px;
+@breadcrumb-padding-horizontal: 15px;
+//** Breadcrumb background color
+@breadcrumb-bg:                 #f5f5f5;
+//** Breadcrumb text color
+@breadcrumb-color:              #ccc;
+//** Text color of current page in the breadcrumb
+@breadcrumb-active-color:       @gray-light;
+//** Textual separator for between breadcrumb elements
+@breadcrumb-separator:          "/";
+
+
+//== Carousel
+//
+//##
+
+@carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
+
+@carousel-control-color:                      #fff;
+@carousel-control-width:                      15%;
+@carousel-control-opacity:                    .5;
+@carousel-control-font-size:                  20px;
+
+@carousel-indicator-active-bg:                #fff;
+@carousel-indicator-border-color:             #fff;
+
+@carousel-caption-color:                      #fff;
+
+
+//== Close
+//
+//##
+
+@close-font-weight:           bold;
+@close-color:                 #000;
+@close-text-shadow:           0 1px 0 #fff;
+
+
+//== Code
+//
+//##
+
+@code-color:                  #c7254e;
+@code-bg:                     #f9f2f4;
+
+@kbd-color:                   #fff;
+@kbd-bg:                      #333;
+
+@pre-bg:                      #f5f5f5;
+@pre-color:                   @gray-dark;
+@pre-border-color:            #ccc;
+@pre-scrollable-max-height:   340px;
+
+
+//== Type
+//
+//##
+
+//** Horizontal offset for forms and lists.
+@component-offset-horizontal: 180px;
+//** Text muted color
+@text-muted:                  @gray-light;
+//** Abbreviations and acronyms border color
+@abbr-border-color:           @gray-light;
+//** Headings small color
+@headings-small-color:        @gray-light;
+//** Blockquote small color
+@blockquote-small-color:      @gray-light;
+//** Blockquote font size
+@blockquote-font-size:        (@font-size-base * 1.25);
+//** Blockquote border color
+@blockquote-border-color:     @gray-lighter;
+//** Page header border color
+@page-header-border-color:    @gray-lighter;
+//** Width of horizontal description list titles
+@dl-horizontal-offset:        @component-offset-horizontal;
+//** Horizontal line color.
+@hr-border:                   @gray-lighter;
 
 // CSS image replacement
 //
@@ -894,7 +1750,6 @@
 // Keep images from scaling beyond the width of their parents.
 .img-responsive(@display: block) {
   display: @display;
-  width: 100% \9; // Force IE10 and below to size SVG images correctly
   max-width: 100%; // Part 1: Set a maximum relative to the parent
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
@@ -923,7 +1778,7 @@
 
 .label-variant(@color) {
   background-color: @color;
-  
+
   &[href] {
     &:hover,
     &:focus {
@@ -1104,9 +1959,12 @@
 
 // Placeholder text
 .placeholder(@color: @input-color-placeholder) {
-  &::-moz-placeholder           { color: @color;   // Firefox
-                                  opacity: 1; } // See https://github.com/twbs/bootstrap/pull/11526
-  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  // Firefox
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: @color; } // Internet Explorer 10+
   &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
 }
 
@@ -1255,6 +2113,7 @@
 
   &:hover,
   &:focus,
+  &.focus,
   &:active,
   &.active,
   .open > .dropdown-toggle& {
@@ -1273,6 +2132,7 @@
     &,
     &:hover,
     &:focus,
+    &.focus,
     &:active,
     &.active {
       background-color: @background;
@@ -1396,7 +2256,11 @@
   .radio,
   .checkbox,
   .radio-inline,
-  .checkbox-inline  {
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
     color: @text-color;
   }
   // Set the border and box shadow on specific inputs to match
@@ -1850,7 +2714,7 @@
   }
 }
 
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 //
 // 1. Set default font family to sans-serif.
@@ -1877,7 +2741,8 @@ body {
 
 //
 // Correct `block` display not defined for any HTML5 element in IE 8/9.
-// Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+// Correct `block` display not defined for `details` or `summary` in IE 10/11
+// and Firefox.
 // Correct `block` display not defined for `main` in IE 11.
 //
 
@@ -1890,6 +2755,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -1937,7 +2803,7 @@ template {
 //
 
 a {
-  background: transparent;
+  background-color: transparent;
 }
 
 //
@@ -2276,106 +3142,112 @@ th {
   padding: 0;
 }
 
-//
-// Basic print styles
-// --------------------------------------------------
-// Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+
+// ==========================================================================
+// Print styles.
+// Inlined to avoid the additional HTTP request: h5bp.com/r
+// ==========================================================================
 
 @media print {
-
-  * {
-    text-shadow: none !important;
-    color: #000 !important; // Black prints faster: h5bp.com/s
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  // Don't show links for images, or javascript/internal links
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group; // h5bp.com/t
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  // Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
-  // Once fixed, we can just straight up remove this.
-  select {
-    background: #fff !important;
-  }
-
-  // Bootstrap components
-  .navbar {
-    display: none;
-  }
-  .table {
-    td,
-    th {
-      background-color: #fff !important;
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; // Black prints faster: h5bp.com/s
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
-  }
-  .btn,
-  .dropup > .btn {
-    > .caret {
-      border-top-color: #000 !important;
-    }
-  }
-  .label {
-    border: 1px solid #000;
-  }
 
-  .table {
-    border-collapse: collapse !important;
-  }
-  .table-bordered {
-    th,
-    td {
-      border: 1px solid #ddd !important;
+    a,
+    a:visited {
+        text-decoration: underline;
     }
-  }
 
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    // Don't show links that are fragment identifiers,
+    // or use the `javascript:` pseudo protocol
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; // h5bp.com/t
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    // Bootstrap specific changes start
+    //
+    // Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
+    // Once fixed, we can just straight up remove this.
+    select {
+        background: #fff !important;
+    }
+
+    // Bootstrap components
+    .navbar {
+        display: none;
+    }
+    .btn,
+    .dropup > .btn {
+        > .caret {
+            border-top-color: #000 !important;
+        }
+    }
+    .label {
+        border: 1px solid #000;
+    }
+
+    .table {
+        border-collapse: collapse !important;
+
+        td,
+        th {
+            background-color: #fff !important;
+        }
+    }
+    .table-bordered {
+        th,
+        td {
+            border: 1px solid #ddd !important;
+        }
+    }
+
+    // Bootstrap specific changes end
 }
 
 //
@@ -2413,7 +3285,8 @@ th {
 // Individual icons
 .glyphicon-asterisk               { &:before { content: "\2a"; } }
 .glyphicon-plus                   { &:before { content: "\2b"; } }
-.glyphicon-euro                   { &:before { content: "\20ac"; } }
+.glyphicon-euro,
+.glyphicon-eur                    { &:before { content: "\20ac"; } }
 .glyphicon-minus                  { &:before { content: "\2212"; } }
 .glyphicon-cloud                  { &:before { content: "\2601"; } }
 .glyphicon-envelope               { &:before { content: "\2709"; } }
@@ -2666,7 +3539,7 @@ a {
   &:hover,
   &:focus {
     color: @link-hover-color;
-    text-decoration: underline;
+    text-decoration: @link-hover-decoration;
   }
 
   &:focus {
@@ -2843,11 +3716,6 @@ p {
 small,
 .small {
   font-size: floor((100% * @font-size-small / @font-size-base));
-}
-
-// Undo browser default styling
-cite {
-  font-style: normal;
 }
 
 mark,
@@ -3064,12 +3932,6 @@ blockquote.pull-right {
   }
 }
 
-// Quotes
-blockquote:before,
-blockquote:after {
-  content: "";
-}
-
 // Addresses
 address {
   margin-bottom: @line-height-computed;
@@ -3111,6 +3973,7 @@ kbd {
   kbd {
     padding: 0;
     font-size: 100%;
+    font-weight: bold;
     box-shadow: none;
   }
 }
@@ -3239,6 +4102,12 @@ pre {
 table {
   background-color: @table-bg;
 }
+caption {
+  padding-top: @table-cell-padding;
+  padding-bottom: @table-cell-padding;
+  color: @text-muted;
+  text-align: left;
+}
 th {
   text-align: left;
 }
@@ -3339,10 +4208,7 @@ th {
 
 .table-striped {
   > tbody > tr:nth-child(odd) {
-    > td,
-    > th {
-      background-color: @table-bg-accent;
-    }
+    background-color: @table-bg-accent;
   }
 }
 
@@ -3353,10 +4219,7 @@ th {
 
 .table-hover {
   > tbody > tr:hover {
-    > td,
-    > th {
-      background-color: @table-bg-hover;
-    }
+    background-color: @table-bg-hover;
   }
 }
 
@@ -3402,14 +4265,15 @@ table {
 // will display normally.
 
 .table-responsive {
+  overflow-x: auto;
+  min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
   @media screen and (max-width: @screen-xs-max) {
     width: 100%;
     margin-bottom: (@line-height-computed * 0.75);
     overflow-y: hidden;
-    overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid @table-border-color;
-    -webkit-overflow-scrolling: touch;
 
     // Tighten up spacing
     > .table {
@@ -3608,7 +4472,7 @@ output {
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
-    cursor: not-allowed;
+    cursor: @cursor-disabled;
     background-color: @input-bg-disabled;
     opacity: 1; // iOS fix for unreadable disabled content
   }
@@ -3650,9 +4514,26 @@ input[type="month"] {
 
   &.input-sm {
     line-height: @input-height-small;
+    line-height: @line-height-small ~"\0";
   }
   &.input-lg {
     line-height: @input-height-large;
+    line-height: @line-height-large ~"\0";
+  }
+}
+
+// IE 11 hack to reverse the iOS temporal input hack.
+_:-ms-fullscreen, :root input[type="date"],
+_:-ms-fullscreen, :root input[type="time"],
+_:-ms-fullscreen, :root input[type="datetime-local"],
+_:-ms-fullscreen, :root input[type="month"] {
+  line-height: @line-height-base;
+
+  &.input-sm {
+    line-height: @line-height-small;
+  }
+  &.input-lg {
+    line-height: @line-height-large;
   }
 }
 
@@ -3675,11 +4556,11 @@ input[type="month"] {
 .checkbox {
   position: relative;
   display: block;
-  min-height: @line-height-computed; // clear the floating input if there is no label text
   margin-top: 10px;
   margin-bottom: 10px;
 
   label {
+    min-height: @line-height-computed; // Ensure the input doesn't jump when there is no text
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
@@ -3725,7 +4606,7 @@ input[type="checkbox"] {
   &[disabled],
   &.disabled,
   fieldset[disabled] & {
-    cursor: not-allowed;
+    cursor: @cursor-disabled;
   }
 }
 // These classes are used directly on <label>s
@@ -3733,7 +4614,7 @@ input[type="checkbox"] {
 .checkbox-inline {
   &.disabled,
   fieldset[disabled] & {
-    cursor: not-allowed;
+    cursor: @cursor-disabled;
   }
 }
 // These classes are used on elements with <label> descendants
@@ -3742,7 +4623,7 @@ input[type="checkbox"] {
   &.disabled,
   fieldset[disabled] & {
     label {
-      cursor: not-allowed;
+      cursor: @cursor-disabled;
     }
   }
 }
@@ -3773,12 +4654,14 @@ input[type="checkbox"] {
 // Build on `.form-control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
 
-.input-sm {
-  .input-size(@input-height-small; @padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+.input-sm,
+.form-group-sm .form-control {
+  .input-size(@input-height-small; @padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @input-border-radius-small);
 }
 
-.input-lg {
-  .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+.input-lg,
+.form-group-lg .form-control {
+  .input-size(@input-height-large; @padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @input-border-radius-large);
 }
 
 
@@ -3798,7 +4681,7 @@ input[type="checkbox"] {
 // Feedback icon (requires .glyphicon classes)
 .form-control-feedback {
   position: absolute;
-  top: (@line-height-computed + 5); // Height of the `label` and its margin
+  top: 0;
   right: 0;
   z-index: 2; // Ensure icon is above input groups
   display: block;
@@ -3806,6 +4689,7 @@ input[type="checkbox"] {
   height: @input-height-base;
   line-height: @input-height-base;
   text-align: center;
+  pointer-events: none;
 }
 .input-lg + .form-control-feedback {
   width: @input-height-large;
@@ -3829,10 +4713,15 @@ input[type="checkbox"] {
   .form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
 }
 
+// Reposition feedback icon if input has visible label above
+.has-feedback label {
 
-// Reposition feedback icon if label is hidden with "screenreader only" state
-.has-feedback label.sr-only ~ .form-control-feedback {
-  top: 0;
+  & ~ .form-control-feedback {
+     top: (@line-height-computed + 5); // Height of the `label` and its margin
+  }
+  &.sr-only ~ .form-control-feedback {
+     top: 0;
+  }
 }
 
 
@@ -3847,7 +4736,6 @@ input[type="checkbox"] {
   margin-bottom: 10px;
   color: lighten(@text-color, 25%); // lighten the text some for contrast
 }
-
 
 
 // Inline forms
@@ -3877,6 +4765,11 @@ input[type="checkbox"] {
       display: inline-block;
       width: auto; // Prevent labels from stacking above inputs in `.form-group`
       vertical-align: middle;
+    }
+
+    // Make static controls behave like regular ones
+    .form-control-static {
+      display: inline-block;
     }
 
     .input-group {
@@ -3920,10 +4813,7 @@ input[type="checkbox"] {
       margin-left: 0;
     }
 
-    // Validation states
-    //
-    // Reposition the icon because it's now within a grid column and columns have
-    // `position: relative;` on them. Also accounts for the grid gutter padding.
+    // Re-override the feedback icon.
     .has-feedback .form-control-feedback {
       top: 0;
     }
@@ -3976,7 +4866,6 @@ input[type="checkbox"] {
   // Reposition the icon because it's now within a grid column and columns have
   // `position: relative;` on them. Also accounts for the grid gutter padding.
   .has-feedback .form-control-feedback {
-    top: 0;
     right: (@grid-gutter-width / 2);
   }
 
@@ -3990,18 +4879,12 @@ input[type="checkbox"] {
         padding-top: ((@padding-large-vertical * @line-height-large) + 1);
       }
     }
-    .form-control {
-      &:extend(.input-lg);
-    }
   }
   .form-group-sm {
     @media (min-width: @screen-sm-min) {
       .control-label {
         padding-top: (@padding-small-vertical + 1);
       }
-    }
-    .form-control {
-      &:extend(.input-sm);
     }
   }
 }
@@ -4020,6 +4903,7 @@ input[type="checkbox"] {
   font-weight: @btn-font-weight;
   text-align: center;
   vertical-align: middle;
+  touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
@@ -4030,13 +4914,15 @@ input[type="checkbox"] {
   &,
   &:active,
   &.active {
-    &:focus {
+    &:focus,
+    &.focus {
       .tab-focus();
     }
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.focus {
     color: @btn-default-color;
     text-decoration: none;
   }
@@ -4051,7 +4937,7 @@ input[type="checkbox"] {
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    cursor: not-allowed;
+    cursor: @cursor-disabled;
     pointer-events: none; // Future-proof disabling of clicks
     .opacity(.65);
     .box-shadow(none);
@@ -4093,11 +4979,11 @@ input[type="checkbox"] {
 .btn-link {
   color: @link-color;
   font-weight: normal;
-  cursor: pointer;
   border-radius: 0;
 
   &,
   &:active,
+  &.active,
   &[disabled],
   fieldset[disabled] & {
     background-color: transparent;
@@ -4183,8 +5069,9 @@ input[type="button"] {
 
 .collapse {
   display: none;
+  visibility: hidden;
 
-  &.in      { display: block; }
+  &.in      { display: block; visibility: visible; }
   tr&.in    { display: table-row; }
   tbody&.in { display: table-row-group; }
 }
@@ -4193,7 +5080,9 @@ input[type="button"] {
   position: relative;
   height: 0;
   overflow: hidden;
-  .transition(height .35s ease);
+  .transition-property(~"height, visibility");
+  .transition-duration(.35s);
+  .transition-timing-function(ease);
 }
 
 //
@@ -4301,16 +5190,15 @@ input[type="button"] {
   &:focus {
     color: @dropdown-link-disabled-color;
   }
-}
-// Nuke hover/focus effects
-.dropdown-menu > .disabled > a {
+
+  // Nuke hover/focus effects
   &:hover,
   &:focus {
     text-decoration: none;
     background-color: transparent;
     background-image: none; // Remove CSS gradient
     .reset-filter();
-    cursor: not-allowed;
+    cursor: @cursor-disabled;
   }
 }
 
@@ -4410,7 +5298,6 @@ input[type="button"] {
     }
   }
 }
-
 
 //
 // Button groups
@@ -4612,7 +5499,6 @@ input[type="button"] {
 }
 
 
-
 // Justified button groups
 // ----------------------
 
@@ -4640,17 +5526,25 @@ input[type="button"] {
 // Checkbox and radio options
 //
 // In order to support the browser's form validation feedback, powered by the
-// `required` attribute, we have to "hide" the inputs via `opacity`. We cannot
-// use `display: none;` or `visibility: hidden;` as that also hides the popover.
+// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
+// `display: none;` or `visibility: hidden;` as that also hides the popover.
+// Simply visually hiding the inputs via `opacity` would leave them clickable in
+// certain cases which is prevented by using `clip` and `pointer-events`.
 // This way, we ensure a DOM element is visible to position the popover from.
 //
-// See https://github.com/twbs/bootstrap/pull/12794 for more.
+// See https://github.com/twbs/bootstrap/pull/12794 and
+// https://github.com/twbs/bootstrap/pull/14559 for more information.
 
-[data-toggle="buttons"] > .btn > input[type="radio"],
-[data-toggle="buttons"] > .btn > input[type="checkbox"] {
-  position: absolute;
-  z-index: -1;
-  .opacity(0);
+[data-toggle="buttons"] {
+  > .btn,
+  > .btn-group > .btn {
+    input[type="radio"],
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
+  }
 }
 
 //
@@ -4858,7 +5752,7 @@ input[type="button"] {
         color: @nav-disabled-link-hover-color;
         text-decoration: none;
         background-color: transparent;
-        cursor: not-allowed;
+        cursor: @cursor-disabled;
       }
     }
   }
@@ -5045,9 +5939,11 @@ input[type="button"] {
 .tab-content {
   > .tab-pane {
     display: none;
+    visibility: hidden;
   }
   > .active {
     display: block;
+    visibility: visible;
   }
 }
 
@@ -5132,6 +6028,7 @@ input[type="button"] {
 
     &.collapse {
       display: block !important;
+      visibility: visible !important;
       height: auto !important;
       padding-bottom: 0; // Override default setting
       overflow: visible !important;
@@ -5157,7 +6054,7 @@ input[type="button"] {
   .navbar-collapse {
     max-height: @navbar-collapse-max-height;
 
-    @media (max-width: @screen-xs-min) and (orientation: landscape) {
+    @media (max-device-width: @screen-xs-min) and (orientation: landscape) {
       max-height: 200px;
     }
   }
@@ -5206,7 +6103,6 @@ input[type="button"] {
   right: 0;
   left: 0;
   z-index: @zindex-navbar-fixed;
-  .translate3d(0, 0, 0);
 
   // Undo the rounded corners
   @media (min-width: @grid-float-breakpoint) {
@@ -5236,6 +6132,10 @@ input[type="button"] {
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  > img {
+    display: block;
   }
 
   @media (min-width: @grid-float-breakpoint) {
@@ -5336,23 +6236,7 @@ input[type="button"] {
         padding-bottom: @navbar-padding-vertical;
       }
     }
-
-    &.navbar-right:last-child {
-      margin-right: -@navbar-padding-horizontal;
-    }
   }
-}
-
-
-// Component alignment
-//
-// Repurpose the pull utilities as their own navbar utilities to avoid specificity
-// issues with parents and chaining. Only do this when the navbar is uncollapsed
-// though so that navbar contents properly stack and align in mobile.
-
-@media (min-width: @grid-float-breakpoint) {
-  .navbar-left  { .pull-left(); }
-  .navbar-right { .pull-right(); }
 }
 
 
@@ -5376,6 +6260,10 @@ input[type="button"] {
   .form-group {
     @media (max-width: @grid-float-breakpoint-max) {
       margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -5391,11 +6279,6 @@ input[type="button"] {
     padding-top: 0;
     padding-bottom: 0;
     .box-shadow(none);
-
-    // Outdent the form if last child to line up with content down the page
-    &.navbar-right:last-child {
-      margin-right: -@navbar-padding-horizontal;
-    }
   }
 }
 
@@ -5440,13 +6323,30 @@ input[type="button"] {
     float: left;
     margin-left: @navbar-padding-horizontal;
     margin-right: @navbar-padding-horizontal;
+  }
+}
 
-    // Outdent the form if last child to line up with content down the page
-    &.navbar-right:last-child {
+
+// Component alignment
+//
+// Repurpose the pull utilities as their own navbar utilities to avoid specificity
+// issues with parents and chaining. Only do this when the navbar is uncollapsed
+// though so that navbar contents properly stack and align in mobile.
+//
+// Declared after the navbar components to ensure more specificity on the margins.
+
+@media (min-width: @grid-float-breakpoint) {
+  .navbar-left  { .pull-left(); }
+  .navbar-right {
+    .pull-right();
+    margin-right: -@navbar-padding-horizontal;
+
+    ~ .navbar-right {
       margin-right: 0;
     }
   }
 }
+
 
 // Alternate navbars
 // --------------------------------------------------
@@ -5817,7 +6717,7 @@ input[type="button"] {
       color: @pagination-disabled-color;
       background-color: @pagination-disabled-bg;
       border-color: @pagination-disabled-border;
-      cursor: not-allowed;
+      cursor: @cursor-disabled;
     }
   }
 }
@@ -5885,10 +6785,9 @@ input[type="button"] {
     > span {
       color: @pager-disabled-color;
       background-color: @pager-bg;
-      cursor: not-allowed;
+      cursor: @cursor-disabled;
     }
   }
-
 }
 
 //
@@ -6018,7 +6917,7 @@ input[type="button"] {
 
 
 .jumbotron {
-  padding: @jumbotron-padding;
+  padding: @jumbotron-padding (@jumbotron-padding / 2);
   margin-bottom: @jumbotron-padding;
   color: @jumbotron-color;
   background-color: @jumbotron-bg;
@@ -6037,7 +6936,8 @@ input[type="button"] {
     border-top-color: darken(@jumbotron-bg, 10%);
   }
 
-  .container & {
+  .container &,
+  .container-fluid & {
     border-radius: @border-radius-large; // Only round corners at higher resolutions if contained in a container
   }
 
@@ -6046,8 +6946,7 @@ input[type="button"] {
   }
 
   @media screen and (min-width: @screen-sm-min) {
-    padding-top:    (@jumbotron-padding * 1.6);
-    padding-bottom: (@jumbotron-padding * 1.6);
+    padding: (@jumbotron-padding * 1.6) 0;
 
     .container & {
       padding-left:  (@jumbotron-padding * 2);
@@ -6075,7 +6974,7 @@ input[type="button"] {
   background-color: @thumbnail-bg;
   border: 1px solid @thumbnail-border;
   border-radius: @thumbnail-border-radius;
-  .transition(all .2s ease-in-out);
+  .transition(border .2s ease-in-out);
 
   > img,
   a > img {
@@ -6188,7 +7087,6 @@ input[type="button"] {
 }
 
 
-
 // Bar itself
 // -------------------------
 
@@ -6198,7 +7096,7 @@ input[type="button"] {
   height: @line-height-computed;
   margin-bottom: @line-height-computed;
   background-color: @progress-bg;
-  border-radius: @border-radius-base;
+  border-radius: @progress-border-radius;
   .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
 }
 
@@ -6236,23 +7134,6 @@ input[type="button"] {
   .animation(progress-bar-stripes 2s linear infinite);
 }
 
-// Account for lower percentages
-.progress-bar {
-  &[aria-valuenow="1"],
-  &[aria-valuenow="2"] {
-    min-width: 30px;
-  }
-
-  &[aria-valuenow="0"] {
-    color: @gray-light;
-    min-width: 30px;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-  }
-}
-
-
 
 // Variations
 // -------------------------
@@ -6273,57 +7154,48 @@ input[type="button"] {
   .progress-bar-variant(@progress-bar-danger-bg);
 }
 
-// Media objects
-// Source: http://stubbornella.org/content/?p=497
-// --------------------------------------------------
-
-
-// Common styles
-// -------------------------
-
-// Clear the floats
-.media,
-.media-body {
-  overflow: hidden;
-  zoom: 1;
-}
-
-// Proper spacing between instances of .media
-.media,
-.media .media {
+.media {
+  // Proper spacing between instances of .media
   margin-top: 15px;
-}
-.media:first-child {
-  margin-top: 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
-// For images and videos, set to block
-.media-object {
-  display: block;
+.media-right,
+.media > .pull-right {
+  padding-left: 10px;
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: 10px;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media-middle {
+  vertical-align: middle;
+}
+
+.media-bottom {
+  vertical-align: bottom;
 }
 
 // Reset margins on headings for tighter default spacing
 .media-heading {
-  margin: 0 0 5px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
-
-
-// Media image alignment
-// -------------------------
-
-.media {
-  > .pull-left {
-    margin-right: 10px;
-  }
-  > .pull-right {
-    margin-left: 10px;
-  }
-}
-
 
 // Media list variation
-// -------------------------
-
+//
 // Undo default ul/ol styles
 .media-list {
   padding-left: 0;
@@ -6406,6 +7278,7 @@ a.list-group-item {
   &.disabled:focus {
     background-color: @list-group-disabled-bg;
     color: @list-group-disabled-color;
+    cursor: @cursor-disabled;
 
     // Force color to inherit for custom content
     .list-group-item-heading {
@@ -6520,7 +7393,8 @@ a.list-group-item {
 // any kind of custom content between the two.
 
 .panel {
-  > .list-group {
+  > .list-group,
+  > .panel-collapse > .list-group {
     margin-bottom: 0;
 
     .list-group-item {
@@ -6564,6 +7438,11 @@ a.list-group-item {
   > .table-responsive > .table,
   > .panel-collapse > .table {
     margin-bottom: 0;
+
+    caption {
+      padding-left: @panel-body-padding;
+      padding-right: @panel-body-padding;
+    }
   }
   // Add border top radius for first one
   > .table:first-child,
@@ -6573,6 +7452,9 @@ a.list-group-item {
     > thead:first-child,
     > tbody:first-child {
       > tr:first-child {
+        border-top-left-radius: (@panel-border-radius - 1);
+        border-top-right-radius: (@panel-border-radius - 1);
+
         td:first-child,
         th:first-child {
           border-top-left-radius: (@panel-border-radius - 1);
@@ -6592,6 +7474,9 @@ a.list-group-item {
     > tbody:last-child,
     > tfoot:last-child {
       > tr:last-child {
+        border-bottom-left-radius: (@panel-border-radius - 1);
+        border-bottom-right-radius: (@panel-border-radius - 1);
+
         td:first-child,
         th:first-child {
           border-bottom-left-radius: (@panel-border-radius - 1);
@@ -6604,7 +7489,9 @@ a.list-group-item {
     }
   }
   > .panel-body + .table,
-  > .panel-body + .table-responsive {
+  > .panel-body + .table-responsive,
+  > .table + .panel-body,
+  > .table-responsive + .panel-body {
     border-top: 1px solid @table-border-color;
   }
   > .table > tbody:first-child > tr:first-child th,
@@ -6666,6 +7553,7 @@ a.list-group-item {
   .panel {
     margin-bottom: 0;
     border-radius: @panel-border-radius;
+
     + .panel {
       margin-top: 5px;
     }
@@ -6673,10 +7561,13 @@ a.list-group-item {
 
   .panel-heading {
     border-bottom: 0;
-    + .panel-collapse > .panel-body {
+
+    + .panel-collapse > .panel-body,
+    + .panel-collapse > .list-group {
       border-top: 1px solid @panel-inner-border;
     }
   }
+
   .panel-footer {
     border-top: 0;
     + .panel-collapse .panel-body {
@@ -6720,7 +7611,8 @@ a.list-group-item {
   .embed-responsive-item,
   iframe,
   embed,
-  object {
+  object,
+  video {
     position: absolute;
     top: 0;
     left: 0;
@@ -6837,10 +7729,10 @@ a.list-group-item {
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    .translate3d(0, -25%, 0);
+    .translate(0, -25%);
     .transition-transform(~"0.3s ease-out");
   }
-  &.in .modal-dialog { .translate3d(0, 0, 0) }
+  &.in .modal-dialog { .translate(0, 0) }
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -6874,7 +7766,6 @@ a.list-group-item {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: @zindex-modal-background;
   background-color: @modal-backdrop-bg;
   // Fade for backdrop
   &.fade { .opacity(0); }
@@ -7065,7 +7956,11 @@ a.list-group-item {
   display: none;
   max-width: @popover-max-width;
   padding: 1px;
-  text-align: left; // Reset given new insertion method
+  // Reset font and text propertes given new insertion method
+  font-size: @font-size-base;
+  font-weight: normal;
+  line-height: @line-height-base;
+  text-align: left;
   background-color: @popover-bg;
   background-clip: padding-box;
   border: 1px solid @popover-fallback-border-color;
@@ -7087,8 +7982,6 @@ a.list-group-item {
   margin: 0; // reset heading margin
   padding: 8px 14px;
   font-size: @font-size-base;
-  font-weight: normal;
-  line-height: 18px;
   background-color: @popover-title-bg;
   border-bottom: 1px solid darken(@popover-title-bg, 5%);
   border-radius: (@border-radius-large - 1) (@border-radius-large - 1) 0 0;
@@ -7183,7 +8076,6 @@ a.list-group-item {
       bottom: -@popover-arrow-width;
     }
   }
-
 }
 
 //
@@ -7211,6 +8103,30 @@ a.list-group-item {
     > a > img {
       &:extend(.img-responsive);
       line-height: 1;
+    }
+
+    // WebKit CSS3 transforms for supported devices
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      transition: transform .6s ease-in-out;
+      backface-visibility: hidden;
+      perspective: 1000;
+
+      &.next,
+      &.active.right {
+        transform: translate3d(100%, 0, 0);
+        left: 0;
+      }
+      &.prev,
+      &.active.left {
+        transform: translate3d(-100%, 0, 0);
+        left: 0;
+      }
+      &.next.left,
+      &.prev.right,
+      &.active {
+        transform: translate3d(0, 0, 0);
+        left: 0;
+      }
     }
   }
 
@@ -7485,7 +8401,6 @@ a.list-group-item {
 
 .affix {
   position: fixed;
-  .translate3d(0, 0, 0);
 }
 
 //
@@ -7682,6 +8597,7 @@ a.list-group-item {
     .responsive-invisibility();
   }
 }
+
 
 // Cosmo 3.2.0
 // Bootswatch
