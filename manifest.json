@@ -123,12 +123,6 @@
 			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/united/united.css"
 		},
 		{
-			"name" : "White-plum (Divshot)",
-			"author" : "Divshot",
-			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/white-plum/white-plum.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/white-plum/white-plum.css"
-		},
-		{
 			"name" : "Yeti (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/yeti/yeti.less",
