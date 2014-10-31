@@ -24,109 +24,127 @@
 			"name" : "Amelia (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/amelia.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/amelia.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/amelia.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/thumbnail.png"
 		},
 		{
 			"name" : "Cerulean (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cerulean/cerulean.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/cerulean.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/cerulean.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cerulean/thumbnail.png"
 		},
 		{
 			"name" : "Cosmo (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cosmo/cosmo.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cosmo/cosmo.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cosmo/cosmo.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cosmo/thumbnail.png"
 		},
 		{
 			"name" : "Cyborg (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cyborg/cyborg.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cyborg/cyborg.css"		
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cyborg/cyborg.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cyborg/thumbnail.png"		
 		},
 		{
 			"name" : "Darkly (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/darkly/darkly.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/darkly/darkly.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/darkly/darkly.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/darkly/thumbnail.png"
 		},
 		{
 			"name" : "Default",
 			"author" : "Bootstrap",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/default/bootstrap-3.3.0.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/default/bootstrap-3.3.0.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/default/bootstrap-3.3.0.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/default/thumbnail.png"
 		},
 		{
 			"name" : "Flatly (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/flatly/flatly.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/flatly/flatly.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/flatly/flatly.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/flatly/thumbnail.png"
 		},
 		{
 			"name" : "Journal (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/journal/journal.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/journal/journal.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/journal/journal.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/journal/thumbnail.png"
 		},
 		{
 			"name" : "Lumen (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/lumen/lumen.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/lumen/lumen.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/lumen/lumen.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/lumen/thumbnail.png"
 		},
 		{
 			"name" : "Paper (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/paper/paper.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/paper/paper.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/paper/paper.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/paper/thumbnail.png"
 		},
 		{
 			"name" : "Readable (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/readable/readable.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/readable/readable.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/readable/readable.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/readable/thumbnail.png"
 		},
 		{
 			"name" : "Sandstone (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/sandstone/sandstone.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/sandstone/sandstone.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/sandstone/sandstone.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/sandstone/thumbnail.png"
 		},
 		{
 			"name" : "Simplex (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/simplex/simplex.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/simplex/simplex.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/simplex/simplex.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/simplex/thumbnail.png"
 		},
 		{
 			"name" : "Slate (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/slate/slate.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/slate/slate.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/slate/slate.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/slate/thumbnail.png"
 		},
 		{
 			"name" : "Spacelab (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/spacelab/spacelab.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/spacelab/spacelab.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/spacelab/spacelab.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/spacelab/thumbnail.png"
 		},
 		{
 			"name" : "Superhero (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/superhero/superhero.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/superhero/superhero.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/superhero/superhero.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/superhero/thumbnail.png"
 		},
 		{
 			"name" : "United (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/united/united.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/united/united.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/united/united.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/united/thumbnail.png"
 		},
 		{
 			"name" : "Yeti (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/yeti/yeti.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/yeti/yeti.css"
+			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/yeti/yeti.css",
+			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/yeti/thumbnail.png"
 		}	
 	]
 }
