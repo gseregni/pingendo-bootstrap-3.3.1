@@ -21,12 +21,6 @@
 	],
 	"themes" : [
 		{
-			"name" : "Amelia (Bootswatch)",
-			"author" : "Thomas Park",
-			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/amelia.less",
-			"css" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/amelia/amelia.css"
-		},
-		{
 			"name" : "Cerulean (Bootswatch)",
 			"author" : "Thomas Park",
 			"less" : "http://pingendo.github.io/pingendo-bootstrap-3.3.0/themes/cerulean/cerulean.less",
