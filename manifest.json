@@ -16,13 +16,13 @@
 			"name" : "Components",
 			"author" : "Pingendo",
 			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3/templates/components/preview.jpg",
-			"html" : "http://pingendo.github.io/pingendo-bootstrap-3.3/templates/components/index.html",
+			"html" : "http://pingendo.github.io/pingendo-bootstrap-3.3/templates/components/index.html"
 		},
 		{
 			"name" : "Empty",
 			"author" : "Pingendo",
 			"preview" : "http://pingendo.github.io/pingendo-bootstrap-3.3/templates/empty/preview.jpg",
-			"html" : "http://pingendo.github.io/pingendo-bootstrap-3.3/templates/empty/index.html",
+			"html" : "http://pingendo.github.io/pingendo-bootstrap-3.3/templates/empty/index.html"
 		}
 	],
 	"themes" : [
